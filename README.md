@@ -1,11 +1,7 @@
 # ⚖️ The Hybrid Balance
 
-### O Futuro do Trabalho — Game + Plataforma de Dados com IA  
+### O Futuro do Trabalho 
 Um projeto integrado que explora o equilíbrio entre vida profissional e pessoal através de um **jogo em Pixel Art** e de uma **plataforma web de RH guiada por Inteligência Artificial**.
-
-<p align="center">
-<a href="#trailer"><strong>🎬 Assista ao Vídeo Pitch e Baixe a Demo!</strong></a>
-</p>
 
 ---
 
@@ -108,8 +104,6 @@ Funções:
 - Pixel Artist  
 - Roteirista  
 
-🔗 *Links:*  
-[LinkedIn](#) • [GitHub](#)
 
 ---
 
