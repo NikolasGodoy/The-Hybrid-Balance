@@ -1,0 +1,615 @@
+/* ==========================
+    RESET / BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Google Font 'Inter' não estava no seu CSS, mas é comum. 
+     Substitua por 'Poppins' ou outra se preferir. */
+  font-family: "Poppins", "Inter", sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617 70%);
+  color: #cbd5e1; /* Cor de texto padrão mais suave */
+  overflow-x: hidden;
+  padding-top: 75px; /* Ajuste para a navbar fixa */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+  font-weight: 700;
+}
+
+p {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+/* ==========================
+  SCROLLBAR
+========================== */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,#06b6d4,#14b8a6);
+  border-radius: 5px;
+}
+
+/* ==========================
+  NAVBAR
+========================== */
+.custom-nav {
+  background: rgba(15, 23, 42, 0.6); /* Um pouco mais de opacidade */
+  backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 0.3s;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  transition: 0.3s;
+  padding: 8px 12px !important;
+  border-radius: 6px;
+}
+.nav-link:hover,
+.nav-link.active { /* Adiciona estado 'active' se JS for usado */
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-toggler {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar-toggler-icon {
+  /* Garante que o ícone seja visível */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ==========================
+  BOTÕES
+========================== */
+.btn-neon,
+.btn-neon-lg {
+  display: inline-block;
+  background: linear-gradient(90deg, #06b6d4, #14b8a6);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s all ease;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.5);
+}
+
+.btn-neon-lg {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+}
+
+.btn-neon:hover,
+.btn-neon-lg:hover {
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.8);
+  color: white;
+}
+
+.btn-outline-light-custom {
+  border-color: #556278 !important;
+  color: #cbd5e1 !important;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: 0.3s all ease;
+}
+
+.btn-outline-light-custom:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #06b6d4 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================
+  HERO SECTION
+========================== */
+.hero-section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.titulo-principal {
+  font-size: clamp(2.5rem, 6vw, 4rem); /* Responsivo */
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+  /* Gradiente não está na imagem principal */
+  /* background: linear-gradient(90deg, #06b6d4, #67e8f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+/* Divisor azul abaixo do título */
+.titulo-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #14b8a6);
+  margin: 0 auto 25px auto;
+  border-radius: 2px;
+}
+
+.subtitulo {
+  font-size: 1.5rem;
+  color: #cbd5e1;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.descricao {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* ==========================
+  SEÇÕES GERAIS
+========================== */
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.titulo-secao {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+.titulo-secao::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #14b8a6);
+  margin: 15px auto 0 auto;
+  border-radius: 2px;
+}
+
+
+/* ==========================
+  CARD PADRÃO (SOBRE)
+========================== */
+.card-custom {
+  background: rgba(30, 41, 59, 0.5); /* #1e293b com 50% */
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  border-color: #06b6d4;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.card-custom h3 {
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.card-custom p {
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: #06b6d4;
+  margin-bottom: 15px;
+}
+
+/* ==========================
+  PERSONAGEM CARD
+========================== */
+.card-personagem {
+  max-width: 700px; /* Mais largo que o original */
+  padding: 30px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.personagem-img {
+  width: 120px; /* Tamanho da imagem de perfil */
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.card-personagem h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.sub-card {
+  background: rgba(15, 23, 42, 0.7); /* #0f172a */
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+}
+.sub-card h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #06b6d4;
+}
+.sub-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 0;
+}
+
+/* ==========================
+  GAMEPLAY / COMO JOGAR
+========================== */
+.gameplay-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.card-gameplay {
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px 30px;
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+.step-number {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #06b6d4, #14b8a6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+}
+.step-content {
+  width: 100%;
+}
+.step-content h3 {
+  margin-bottom: 10px;
+}
+.step-content p {
+  margin-bottom: 0;
+  color: #cbd5e1;
+}
+
+.choice-card {
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+}
+.choice-card h5 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+.choice-card p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: #cbd5e1;
+}
+
+.choice-card.choice-a {
+  background: rgba(239, 68, 68, 0.1); /* Red */
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+.choice-card.choice-a h5 {
+  color: #f87171; /* Red-light */
+}
+
+.choice-card.choice-b {
+  background: rgba(34, 197, 94, 0.1); /* Green */
+  border: 1px solid rgba(34, 197, 94, 0.4);
+}
+.choice-card.choice-b h5 {
+  color: #4ade80; /* Green-light */
+}
+
+
+/* ==========================
+  TRAILER
+========================== */
+
+/* ==========================
+  VIDEO RESPONSIVO (YOUTUBE)
+========================== */
+.video-responsive {
+  position: relative;
+  overflow: hidden;
+  /* A proporção 16:9 é 56.25% (9 / 16 * 100) */
+  padding-top: 56.25%; /* Isso cria o espaço para o vídeo */
+  height: 0;
+  border-radius: 16px; /* Para manter os cantos arredondados */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Mantém a borda do placeholder */
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2); /* Adiciona um brilho suave */
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 16px; /* Para os cantos arredondados do iframe */
+}
+
+.video-placeholder-container {
+  max-width: 900px;
+}
+.video-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.video-placeholder i {
+  font-size: 4rem;
+  color: #94a3b8;
+}
+.video-placeholder p {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 0;
+}
+.video-caption {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-top: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==========================
+  DOWNLOAD
+========================== */
+.download-card {
+  max-width: 900px;
+  padding: 40px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+.download-card .btn-neon-lg,
+.download-card .btn-outline-light-custom {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-size: 1.1rem;
+}
+.download-card .btn-neon-lg i,
+.download-card .btn-outline-light-custom i {
+  margin-right: 8px;
+}
+
+.info-item {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  text-align: left;
+}
+.info-item h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.info-item h5 i {
+  color: #06b6d4;
+}
+.info-item p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  margin-bottom: 0;
+  padding-left: 28px; /* Alinha com texto do título */
+}
+
+/* ==========================
+  EQUIPE
+========================== */
+.card-equipe {
+  background: rgba(30, 41, 59, 0.5);
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  transition: 0.3s ease;
+}
+.card-equipe:hover {
+  transform: translateY(-5px);
+  border-color: #06b6d4;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.equipe-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px auto;
+  background: linear-gradient(145deg, #06b6d4, #14b8a6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+.card-equipe h4 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.card-equipe p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
+.equipe-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btn-social {
+  text-decoration: none;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+.btn-social:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #06b6d4;
+}
+.btn-social i {
+  margin-right: 6px;
+}
+
+/* ==========================
+  CONTATO
+========================== */
+.contato-container {
+  max-width: 800px;
+  padding: 30px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+}
+
+.contato-card-main {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.3s;
+  height: 100%;
+}
+.contato-card-main:hover {
+  border-color: #06b6d4;
+  background: rgba(15, 23, 42, 1);
+}
+.contato-card-main i {
+  font-size: 2.5rem;
+  color: #06b6d4;
+}
+.contato-card-main h5 {
+  margin-bottom: 2px;
+  font-size: 1.2rem;
+}
+.contato-card-main span {
+  color: #cbd5e1;
+  font-size: 1rem;
+}
+
+.btn-social-contato {
+  text-decoration: none;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+  font-weight: 500;
+}
+.btn-social-contato:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-color: #06b6d4;
+}
+.btn-social-contato i {
+  margin-right: 8px;
+}
+
+
+/* ==========================
+  FOOTER
+========================== */
+.footer {
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.footer p {
+  margin-bottom: 0;
+  color: #94a3b8;
+}
+.footer-subtext {
+  font-size: 0.9rem;
+  color: #556278;
+}
+
+/* ==========================
+  ANIMAÇÕES
+========================== */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(25px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+
+}

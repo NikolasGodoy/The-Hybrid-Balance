@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Hybrid Balance</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+    
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" 
+    />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-nav">
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#home">
+            <span>The Hybrid Balance</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav gap-3">
+                <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gameplay">Gameplay</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#download">Download</a></li>
+                <li class="nav-item"><a class="nav-link" href="#equipe">Equipe</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+            <a href="#download" class="btn btn-neon ms-lg-4 mt-3 mt-lg-0">Baixar</a>
+        </div>
+    </div>
+</nav>
+
+
+<section id="home" class="hero-section container text-center">
+    <h1 class="titulo-principal">The Hybrid Balance</h1>
+    <div class="titulo-divider"></div>
+    <p class="subtitulo">
+        Um jogo 2D de simulação de escolha sobre o futuro do trabalho híbrido.
+    </p>
+    <p class="descricao">
+        Controle Alex, um funcionário em home office que precisa equilibrar bem-estar pessoal e responsabilidades profissionais usando tecnologia e IA generativa.
+    </p>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a class="btn btn-neon-lg" href="#download">Baixar Jogo</a>
+        <a class="btn btn-outline-light btn-outline-light-custom" href="#sobre">Saiba Mais</a>
+    </div>
+</section>
+
+
+<section id="sobre" class="section container">
+    <h2 class="titulo-secao">Sobre o Jogo</h2>
+
+    <div class="row g-4 mt-5">
+
+        <div class="col-lg-6">
+            <div class="card-custom h-100">
+                <div class="card-icon"><i class="bi bi-lightbulb"></i></div>
+                <h3>O Conceito</h3>
+                <p>
+                    The Hybrid Balance coloca você no papel de Alex, um funcionário em home office que usa sua flexibilidade para cuidar da saúde. Durante um treino na academia, uma reunião urgente surge e você precisa fazer escolhas críticas.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card-custom h-100">
+                <div class="card-icon"><i class="bi bi-robot"></i></div>
+                <h3>IA como Parceira</h3>
+                <p>
+                    Explore como a inteligência artificial generativa pode ajudar profissionais a se adaptarem rapidamente em ambientes híbridos, criando apresentações e soluções em tempo real durante situações inesperadas.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card-custom h-100">
+                <div class="card-icon"><i class="bi bi-sign-turn-right"></i></div>
+                <h3>Escolhas Importantes</h3>
+                <p>
+                    Cada decisão tem consequências. Priorize seu bem-estar e arrisque o emprego, ou use a tecnologia para equilibrar ambos. O jogo explora dilemas reais do trabalho moderno e a ODS 8 (Trabalho Decente).
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card-custom h-100">
+                <div class="card-icon"><i class="bi bi-controller"></i></div>
+                <h3>Pixel Art Isométrico</h3>
+                <p>
+                    Estilo visual único que mistura pixel art 2D isométrico para o gameplay com uma interface Dark Tech moderna, representando a dualidade entre vida pessoal e profissional.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="alex" class="section container text-center">
+    <h2 class="titulo-secao">Conheça Alex</h2>
+
+    <div class="card-personagem mt-5 mx-auto">
+        <img src="./imagem/Perfil_Alex.png" class="personagem-img" alt="Pixel art do personagem Alex">
+        <h3>Alex</h3>
+        <p class="px-3">
+            Protagonista do jogo. Alex é um profissional moderno que trabalha em home office e tenta equilibrar sua carreira com o bem-estar pessoal. Seus trajes mudam conforme as situações: roupa de academia completa para momentos pessoais e uma combinação híbrida (paletó + shorts) quando precisa improvisar durante reuniões.
+        </p>
+
+        <div class="row mt-4 g-3">
+            <div class="col-md-6">
+                <div class="sub-card">
+                    <h4>Estado 1: Bem-Estar</h4>
+                    <p>Roupa de academia completa</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="sub-card">
+                    <h4>Estado 2: Profissional Híbrido</h4>
+                    <p>Paletó social + shorts de academia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 pt-3">
+            <a href="pagina-do-alex.html" class="btn btn-outline-light-custom">
+                <i class="bi bi-person-lines-fill"></i> Sistema de RH sobre o Alex
+            </a>
+        </div>
+        
+    </div>
+</section>
+
+
+<section id="gameplay" class="section container">
+    <h2 class="titulo-secao">Como Jogar</h2>
+
+    <div class="gameplay-container mx-auto mt-5">
+        
+        <div class="card-gameplay">
+            <div class="step-number">1</div>
+            <div class="step-content">
+                <h3>Cenário: A Academia</h3>
+                <p>O nível começa com Alex na academia durante seu horário de home office. Você pode interagir com o equipamento de exercícios (Halter) para aumentar a barra de Bem-Estar.</p>
+            </div>
+        </div>
+
+        <div class="card-gameplay">
+            <div class="step-number">2</div>
+            <div class="step-content">
+                <h3>A Interrupção</h3>
+                <p>Seu chefe envia uma mensagem urgente: uma reunião importante com um cliente precisa acontecer AGORA. Você deve apresentar um projeto sem preparação prévia.</p>
+            </div>
+        </div>
+
+        <div class="card-gameplay">
+            <div class="step-number">3</div>
+            <div class="step-content">
+                <h3>A Escolha Crítica</h3>
+                <p>Agora você deve fazer uma escolha binária.</p>
+                <div class="row g-3 mt-2">
+                    <div class="col-lg-6">
+                        <div class="choice-card choice-a">
+                            <h5><i class="bi bi-x-circle-fill"></i> Opção A: Ignorar a Reunião</h5>
+                            <p>Continue no Halter e seja demitido por priorizar apenas o bem-estar.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="choice-card choice-b">
+                            <h5><i class="bi bi-check-circle-fill"></i> Opção B: Usar a IA</h5>
+                            <p>Sente no banco, vista o paletó e use IA generativa para criar a apresentação em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="trailer" class="section container text-center">
+    <h2 class="titulo-secao">Vídeo Pitch</h2>
+
+    <div class="video-placeholder-container mt-5 mx-auto">
+        <div class="video-responsive"> <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/U8ekEHnZAgM?si=mO_Fhdm4mIKml5qc" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <p class="video-caption">
+            Assista ao pitch completo do projeto The Hybrid Balance, desenvolvido para o Desafio Global Solution sobre o Futuro do Trabalho. Veja como o jogo explora ambientes híbridos, IA generativa e a ODS 8.
+        </p>
+    </div>
+</section>
+
+
+<section id="download" class="section container text-center">
+    <h2 class="titulo-secao">Baixar o Jogo</h2>
+
+    <div class="download-card mx-auto mt-5">
+        <p class="mb-4">
+            The Hybrid Balance está em desenvolvimento. Cadastre-se para receber notificações sobre o lançamento e acesso antecipado.
+        </p>
+        
+        <a href="https://nikolasgodoy.itch.io/the-hybrid-balance" target="_blank" class="btn btn-neon-lg w-100">
+            <i class="bi bi-pc-display"></i> Download PC
+        </a>
+
+        <div class="download-info-container row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="info-item">
+                    <h5><i class="bi bi-hdd-stack"></i> Requisitos Mínimos</h5>
+                    <p>Windows 10, 4GB RAM, HD Graphics</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-item">
+                    <h5><i class="bi bi-dpad"></i> Plataformas</h5>
+                    <p>PC</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-item">
+                    <h5><i class="bi bi-translate"></i> Idiomas</h5>
+                    <p>Português</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="equipe" class="section container">
+    <h2 class="titulo-secao text-center">Equipe de Desenvolvimento</h2>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card-equipe">
+                
+                <img src="./imagem/perfil-nikolas - Copia.jpg" alt="Foto de Nikolas Mauer Godoy"
+                class="rounded-circle mx-auto d-block mb-4" width="150" height="150">
+                <div class="card-body-custom text-center"> <h4>Nikolas Mauer Godoy</h4>
+                    
+                    <p>Programador Web • Game Designer • Roteirista • UI Designer • Game Artist 2D • Desenvolvedor Unity</p>
+                    <div class="equipe-socials">
+                        <a href="https://github.com/NikolasGodoy" target="_blank" class="btn-social"><i class="bi bi-github"></i> GitHub</a>
+                        <a href="https://www.linkedin.com/in/nikolas-mauer-godoy-b3397323b" target="_blank" class="btn-social"><i class="bi bi-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</section>
+
+
+<section id="contato" class="section container">
+    <h2 class="titulo-secao text-center">Contato</h2>
+
+    <div class="contato-container mx-auto mt-5">
+        <p class="text-center mb-4">
+            Entre em contato conosco para dúvidas, sugestões ou parcerias.
+        </p>
+        
+        <div class="row g-3 justify-content-center">
+            
+            <div class="col-md-8">
+                <a href="mailto:nikolasmg03@gmail.com" class="contato-card-main">
+                    <i class="bi bi-envelope-fill"></i>
+                    <div>
+                        <h5>Email</h5>
+                        <span>nikolasmg03@gmail.com</span>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+            <a href="https://x.com/nikolasgodoyyy" class="btn-social-contato"><i class="bi bi-twitter"></i> Twitter</a>
+            <a href="https://www.instagram.com/nik0las_m.g" class="btn-social-contato"><i class="bi bi-instagram"></i> Instagram</a>
+            <a href="https://nikolasgodoy.itch.io" class="btn-social-contato"><i class="bi bi-box"></i> itch.io</a>
+        </div>
+    </div>
+</section>
+<footer class="footer text-center mt-5">
+    <p class="mb-2">© 2025 The Hybrid Balance — Todos os direitos reservados.</p>
+    <p class="footer-subtext">Projeto desenvolvido para o Desafio Global Solution: O Futuro do Trabalho.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.tnet/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
